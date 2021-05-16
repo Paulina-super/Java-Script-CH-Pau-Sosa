@@ -130,7 +130,7 @@
 
 
 
- localStorage
+ /*localStorage
  Storage  { length: 0 }
  length: 0 __proto__: Storage
  localStorage.setItem("user", JSON.stringify({ username: "", islog: false, lastLogin: undefined }))
@@ -144,4 +144,4 @@
      length: 1
  }
  JSON.parse(localStorage.getItem("user")) { username: "", islog: false }
- `´
+ `´*/
