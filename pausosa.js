@@ -1,7 +1,7 @@
 /* EJERCICIOS ENTREGA CLASES 1 Y 2 JUNTOS*/
 
 /* EJERCICIOS ENTREGA CLASES 3 Y 4: Calcular valor final de un producto seleccionado en función de impuestos y descuentos.*/
-var iva = 1.21;
+/*var iva = 1.21;
 var ganancias = 1.03;
 var limite = 50000;
 let importe = prompt("Ingrese importe");
@@ -16,43 +16,36 @@ if (total > limite) {
 } else {
     alert("No sumar impuesto a las ganancias");
     console.log("Total final sin impuesto a las ganancias $" + total);
-}
+}*/
 
 
-/*Ejercicios y Pre entrega: Calculador de Costos de Importación*/
+/*Ejercicios Clases 5 y 6 y Pre Entrega Final: Calculador de Costos de Importación*/
 
 
-
-var areaPreferencia = Mercosur;
-var areaNoPreferencia = [UnionEuropea, China, EstadosUnidos]
+var areaPreferencia = "Mercosur";
+var areaNoPreferencia = ["Union Europea", "China", "Estados Unidos"]
 var iva = 1.21;
-var iibb = 1.03;
 let valorUnitario = prompt("Ingrese valor unitario del bien");
 let cantidad = prompt("Ingrese cantidad total");
 let total = valorUnitario * cantidad;
-let final = total * iva * ganancias;
+let final = total * iva;
 
 class Bien {
-    constructor(descripcion, codigo, origen, tipoDeBien) {
+    constructor(descripcion, codigo, origen, tipoDeDestinacion) {
         this.descripcion = descripcion;
         this.codigo = codigo;
         this.origen = origen;
-        this.tipoDeBien = tipoDeBien;
+        this.tipoDeDestinacion = tipoDeDestinacion;
     }
-    Arancel(origen = areaNoPreferencia => "Arancel 35%") {
-        console.log("${this.nombre} esta registrado")
+    Arancel() {
+        console.log("${this.origen} determina el % de arancel")
     }
 }
 
-var Tenedores = new Bien("Tenedores de acero", "08.25", "China", "Consumo")
+var Tenedores = new Bien("Tenedores de acero", "08.25", "Mercosur", "Consumo")
 
-
-
-
-for (let i = 1; i <= 10; i++) {
-    //Si la variable i es igual 5 interrumpo el for. 
-    if (i == 5) {
-        break;
-    }
-    alert(i);
+if (origen = areaPreferencia) {
+    alert("Arancel 0%");
+} else {
+    alert("Arancel 35%");
 }
