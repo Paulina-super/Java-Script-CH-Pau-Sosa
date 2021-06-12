@@ -1,5 +1,5 @@
 const LocalStorageGlobalVariables = {
-    Todos_Productos = 'Todos_Productos'
+    Todos_Productos: 'Todos_Productos'
 };
 
 const Carro = {
