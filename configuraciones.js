@@ -1,3 +1,3 @@
 const Carro = {
     carri: "carroActual",
-}
+};

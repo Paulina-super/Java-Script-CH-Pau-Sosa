@@ -1,7 +1,6 @@
 class Carrito {
-    constructor(producto, codigo, precio, cantidad) {
-        this.producto = producto;
-        this.codigo = codigo;
+    constructor(nombre, codigo, precio, cantidad) {
+        this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
     }
