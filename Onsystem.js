@@ -1,3 +1,5 @@
 const LoadDataBaseFromJSON = () => {
-    $.getJSON("productos.json", function(data) {});
+    $.getJSON("productos.json", function(productos) {
+        console.log(productos);
+    });
 };
