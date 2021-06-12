@@ -1,6 +1,6 @@
 const RenderproductList = (prodList) => {
     $('#prod').html('');
-    $.getJSON("./data/products.json", function(data) {
+    $.getJSON("productos.json", function(data) {
         var productsToRender = [];
         $.each(data, function(key, productos) {
             productsToRender.push(`<div class="card" id=${"card-product-" + productos.id
