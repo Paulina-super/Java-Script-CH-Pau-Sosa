@@ -60,4 +60,4 @@ if((nombreIngresado !="") && ((nombreIngresado == "EMA") || (nombreIngresado =="
     alert("Error: Ingresar nombre valido");
 }
 */
-window.onload = LoadDataBaseFromJSON();
+window.onload = Init();
