@@ -1,0 +1,11 @@
+[{
+    "producto": "Torta",
+    "codigo": 1,
+    "precio": 650,
+    "cantidad": 8
+}, {
+    "producto": "Budin",
+    "codigo": 2,
+    "precio": 450,
+    "cantidad": 10
+}]

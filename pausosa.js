@@ -49,3 +49,22 @@ if (origen = areaPreferencia) {
 } else {
     alert("Arancel 35%");
 }
+
+
+let pau = prompt("como estas de humor?");
+/*  ||     let nombreIngresado   = prompt("Ingresar nombre");
+
+if((nombreIngresado !="") && ((nombreIngresado == "EMA") || (nombreIngresado =="ema"))){
+    alert("Hola Ema"); 
+}else{
+    alert("Error: Ingresar nombre valido");
+}
+*/
+class Carrito {
+    constructor(producto, codigo, precio) {
+        this.producto = producto;
+        this.codigo = codigo;
+        this.precio = precio;
+
+    }
+}
