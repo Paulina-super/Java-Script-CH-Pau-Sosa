@@ -20,7 +20,7 @@ if (total > limite) {
 
 
 /*Ejercicios Clases 5 y 6 y Pre Entrega Final: Calculador de Costos de Importación*/
-
+/*
 
 var areaPreferencia = "Mercosur";
 var areaNoPreferencia = ["Union Europea", "China", "Estados Unidos"]
@@ -60,11 +60,4 @@ if((nombreIngresado !="") && ((nombreIngresado == "EMA") || (nombreIngresado =="
     alert("Error: Ingresar nombre valido");
 }
 */
-class Carrito {
-    constructor(producto, codigo, precio) {
-        this.producto = producto;
-        this.codigo = codigo;
-        this.precio = precio;
-
-    }
-}
+window.onload = RenderproductList();

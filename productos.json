@@ -1,11 +1,9 @@
 [{
-    "producto": "Torta",
-    "codigo": 1,
+    "nombre": "Torta",
     "precio": 650,
     "cantidad": 8
 }, {
-    "producto": "Budin",
-    "codigo": 2,
-    "precio": 450,
+    "nombre": "Budin",
+    "precio ": 450,
     "cantidad": 10
 }]
