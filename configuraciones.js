@@ -1,0 +1,3 @@
+const Carro = {
+    carri: "carroActual",
+}
