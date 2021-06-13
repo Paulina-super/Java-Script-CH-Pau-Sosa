@@ -6,8 +6,9 @@ const AgregarProducto = (idProducto) => {
     productosJSON[productoAjuste].cantidad -= 1;
     productoTexto = ConvertorString(productosJSON);
     LocalItem(LocalStorageGlobalVariables.Todos_Productos, productosJSON);
-
-
-
     RenderProductList();
+    let productToCart = productosJSON.find(p => p.id = idProducto)
+
+
+
 };
