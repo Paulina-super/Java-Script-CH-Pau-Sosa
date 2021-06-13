@@ -4,7 +4,10 @@ const AgregarProducto = (idProducto) => {
 
     let productoAjuste = productosJSON.findIndex((p) => p.id == idProducto);
     productosJSON[productoAjuste].cantidad -= 1;
-    let productoTexto = ConvertorJson(productosJSON);
+    productoTexto = ConvertorString(productosJSON);
     LocalItem(LocalStorageGlobalVariables.Todos_Productos, productosJSON);
 
+
+
+    RenderProductList();
 };
