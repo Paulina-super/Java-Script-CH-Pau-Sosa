@@ -53,10 +53,6 @@ p {
     color: #201F1D;
 }
 
-body {
-    background-color: #DAC3B9;
-}
-
 body header {
     background-color: #201F1D;
     width: 100vw;
@@ -85,6 +81,7 @@ body header .menu .navbar-nav a:hover {
 }
 
 body main .home {
+    background-color: #DAC3B9;
     display: flex;
     align-items: center;
 }
