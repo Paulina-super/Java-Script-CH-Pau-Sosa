@@ -25,134 +25,40 @@
             <a href="#/pagina1" class="button">Ver Productos</a>
             <a href="#/pagina2" class="button">Buscar</a>
         </nav>
-        <div id="notificacion"></div>
-        <div id="app" style="height: 50px;">
-        </div>
-
-        <!--
-        <div class="menu">
-            <nav class="navbar navbar-dark navbar-expand-lg">
-                <div class="container-fluid"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav mr-auto mt-2 mt-lg-o">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>-->
-
     </header>
+
+
     <main>
 
-        <div id="prod">
-            <h3>NUESTROS PRODUCTOS</h3>>
-            <div class="container">
-                <div class="card1">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./Imagenes/tortam.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-title">Card title</h6>
-                            <p>Precio:</p>
-                            <p class="card-text">Some ...</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card2">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./Imagenes/pie.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-title">Card title</h6>
-                            <p>Precio:</p>
-                            <p class="card-text">Some ...</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./Imagenes/muffin.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-title">Card title</h6>
-                            <p>Precio:</p>
-                            <p class="card-text">Some ...</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card4">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./Imagenes/galle.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-title">Card title</h6>
-                            <p>Precio:</p>
-                            <p class="card-text">Some ...</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card5">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./Imagenes/croissant.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-title">Card title</h6>
-                            <p>Precio:</p>
-                            <p class="card-text">Some ...</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card6">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./Imagenes/pie.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-title">Card title</h6>
-                            <p>Precio:</p>
-                            <p class="card-text">Some ...</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- formulario con foto de fondo -->
-        <section class="contacto">
+        <section class="turnos">
 
             <div class="formulario">
 
-                <form>
-                    <h3>Contacto</h3>
+                <form id="nuevo-turno">
+                    <h3>Solicitud de turno</h3>
                     <!-- info de contacto -->
                     <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" name="Nombre" placeholder="Nombre y Apellido" value=" ">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" value=" ">
+                    <br>
+                    <label for="nombre">DNI</label>
+                    <input type="phone" id="dni" name="dni" placeholder="DNI" value=" ">
                     <br>
                     <label for="nombre">Teléfono</label>
-                    <input type="phone" name="Teléfono" placeholder="Teléfono" value=" ">
+                    <input type="phone" id="teledono" name="telefono" placeholder="Teléfono" value=" ">
                     <br>
-                    <label for="correo">Correo Electrónico</label>
-                    <input type="email" placeholder="xxxxxxxx@xxxx.com" value=" " required>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control">
                     <br>
+                    <label for="hora">Horario</label>
+                    <input type="time" id="hora" name="hora" class="form-control">
+                    <br>
+
 
                     <!-- detalles de consulta -->
 
-                    <h4>Dejanos tu consulta</h4>
-                    <select>
-            <option>Servicios</option>
-            <option>Productos</option>
-            <option>Otros</option>
-        </select>
-
-                    <textarea rows="4" cols="50" name="mensaje" placeholder="Escriba aquí su mensaje"></textarea>
+                    <h4>Aclaraciones</h4>
+                    <textarea rows="4" cols="50" id="aclaraciones" name="aclaraciones" placeholder="Escriba aquí su mensaje"></textarea>
 
                     <!-- botones -->
 
@@ -160,7 +66,12 @@
                     <input type="reset" value="Limpiar formulario" id="boton">
 
                 </form>
+                <div class="col-md-6">
+                    <h2 id="administrador" class="mb-4">Turnos Asignados</h2>
+                    <ul id="asignado" class="list-group lista-turnos"></ul>
+                </div>
             </div>
+
         </section>
 
 
@@ -192,23 +103,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
 
-    <!--Variales globales
-    <script src="configuraciones.js "></script>
     <script src="funciones.js "></script>
-    <script src="HTMLBuilder.js"></script>
-
-    <script src="carrito.js "></script>
-
-    <script src="sessionstorage.js "></script>
-    <script src="GlobalLocalStorageManager.js"></script>
-    <script src="RenderProductManager.js"></script>
-    <script src="ProductManager.js"></script>
-
-    <script src="Onsystem.js"></script>
-    <script src="pausosa.js "></script>-->
     <script src="jquery-3.5.1.js"></script>
-    <script src="product.js"></script>
-    <script src="main.js"></script>
+
 </body>
 
 </html>
