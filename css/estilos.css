@@ -30,7 +30,7 @@ h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
     margin-bottom: 20px;
-    color: #201F1D;
+    color: rgb(2, 2, 90);
 }
 
 h4 {
@@ -39,7 +39,7 @@ h4 {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: #982539;
+    color: rgb(2, 2, 90);
 }
 
 p {
@@ -86,14 +86,6 @@ body main .home {
     align-items: center;
 }
 
-body main .home .home__video {
-    position: relative;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 body main .home .home__titulo {
     margin: 10% 30%;
     z-index: 1;
@@ -113,7 +105,7 @@ body main .turnos {
 body main .turnos .formulario {
     width: 480px;
     margin: auto;
-    background: rgba(218, 195, 185, 0.4);
+    background: rgba(2, 2, 90, 0.4);
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 7px;
@@ -149,7 +141,7 @@ body main .turnos form input textarea {
 }
 
 body main .turnos form #boton {
-    background-color: #201F1D;
+    background-color: rgb(2, 2, 90);
     color: #DAC3B9;
     padding: 10px;
     border: none;
@@ -190,6 +182,6 @@ body footer .footer__lista .footer__lista--item {
 }
 
 body footer .redes__link--imagen {
-    width: 18%;
+    width: 12%;
     margin: 0.313rem;
 }
