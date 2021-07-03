@@ -13,7 +13,7 @@ h1 {
     text-align: center;
     font-family: 'Allura', cursive;
     font-size: 2rem;
-    color: #B36568;
+    color: whitesmoke;
     padding: 4px;
 }
 
@@ -21,7 +21,7 @@ h2 {
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
-    color: #B36568;
+    color: whitesmoke;
 }
 
 h3 {
@@ -54,7 +54,7 @@ p {
 }
 
 body header {
-    background-color: #201F1D;
+    background-color: rgb(2, 2, 90);
     width: 100vw;
     height: 5%;
     position: relative;
@@ -67,7 +67,7 @@ body header .menu {
 }
 
 body header .menu .navbar-nav {
-    background-color: #201F1D;
+    background-color: rgb(118, 118, 245);
 }
 
 body header .menu .navbar-nav a {
@@ -100,41 +100,8 @@ body main .home .home__titulo {
     text-align: center;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 4px 4px;
-    grid-auto-flow: row;
-    grid-template-areas: "card1 card2 card3" "card4 card5 card6";
-}
-
-.card1 {
-    grid-area: card1;
-}
-
-.card2 {
-    grid-area: card2;
-}
-
-.card3 {
-    grid-area: card3;
-}
-
-.card4 {
-    grid-area: card4;
-}
-
-.card5 {
-    grid-area: card5;
-}
-
-.card6 {
-    grid-area: card6;
-}
-
-body main .contacto {
-    background: url(../Imagenes/bas.png);
+body main .turnos {
+    background: url(../Imagenes/dr.png);
     background-size: 100vw 100vh;
     background-attachment: fixed;
     margin: 0;
@@ -143,7 +110,7 @@ body main .contacto {
     padding-bottom: 100px;
 }
 
-body main .contacto .formulario {
+body main .turnos .formulario {
     width: 480px;
     margin: auto;
     background: rgba(218, 195, 185, 0.4);
@@ -152,16 +119,16 @@ body main .contacto .formulario {
     border-radius: 7px;
 }
 
-body main .contacto form {
+body main .turnos form {
     min-height: 50%;
     max-height: 100%;
     max-width: 100%;
 }
 
-body main .contacto form label,
-body main .contacto form select,
-body main .contacto form textarea,
-body main .contacto form input {
+body main .turnos form label,
+body main .turnos form select,
+body main .turnos form textarea,
+body main .turnos form input {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
@@ -172,16 +139,16 @@ body main .contacto form input {
     border: none;
 }
 
-body main .contacto form label textarea,
-body main .contacto form select textarea,
-body main .contacto form textarea textarea,
-body main .contacto form input textarea {
+body main .turnos form label textarea,
+body main .turnos form select textarea,
+body main .turnos form textarea textarea,
+body main .turnos form input textarea {
     min-height: 100px;
     max-height: 200px;
     max-width: 100%;
 }
 
-body main .contacto form #boton {
+body main .turnos form #boton {
     background-color: #201F1D;
     color: #DAC3B9;
     padding: 10px;
@@ -189,7 +156,7 @@ body main .contacto form #boton {
     width: 100%;
 }
 
-body main .contacto form #boton #boton:hover {
+body main .turnos form #boton #boton:hover {
     cursor: pointer;
 }
 
@@ -197,7 +164,7 @@ body footer {
     display: grid;
     grid-template-columns: 50% 40% 10%;
     grid-template-rows: 1.5rem;
-    background-color: #201F1D;
+    background-color: rgb(2, 2, 90);
     width: 100vw;
     height: 3rem;
     bottom: 0;
