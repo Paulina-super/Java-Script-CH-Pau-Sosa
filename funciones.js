@@ -13,6 +13,9 @@ class Turnos {
     constructor() {
         this.turnos = [];
     }
+    agregarTurnos(turno) {
+        this.turnos = [...this.turnos, turno];
+    }
 }
 
 class Ver {
@@ -65,3 +68,7 @@ function nuevoturno(e) {
         return;
     }
 }
+
+turnoObj.id = Date.now();
+
+administrarTurnos.agregarTurnos(turnoObj);
