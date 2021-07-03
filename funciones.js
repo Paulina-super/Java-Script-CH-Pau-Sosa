@@ -21,7 +21,13 @@ class Ver {
         divMensaje.classList.add('text-center', 'alert', 'col - 12 ');
         if (tipo === 'error') {
             divMensaje.classList.add('alert-danger');
+        } else {
+            divMensaje.classList.add('alert-success');
         }
+        divMensaje.textContent = mensaje;
+
+        document.querySelector('#contenido').insertBefore(divMensaje, document.querySelector('.turnos'));
+
     }
 }
 eventListeners();
@@ -53,8 +59,8 @@ function datosTurno(e) {
 function nuevoturno(e) {
     e.preventDefault();
     const { nombre, dni, telefono, fecha, hora, aclaraciones } = turnoObj;
-    if (nombre === '' || dni === '' || telefono === '' || fecha === '' || hora === '' || aclaraciones === '' || ) {
-        ver.imprimirAlerta("Todos los campos son obligatorios", "error")
+    if (nombre === '' || dni === '' || telefono === '' || fecha === '' || hora === '' || aclaraciones === '') {
+        ver.imprimirAlerta('Todos los campos son obligatorios', 'error')
 
         return;
     }
