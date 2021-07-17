@@ -13,15 +13,16 @@ class Turnos {
     constructor() {
         this.turnos = [];
     }
-    agregarTurnos(turno) {
+    agregarTurnos(turno) {/*verificar que no se repitan los turnos*/
         this.turnos = [...this.turnos, turno];
     }
 }
-
+/*CAMBIAR NOMBRE CLASS*/
 class Ver {
     imprimirAlerta(mensaje, tipo) {
+        this.borrarAlertas();
         const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert', 'col - 12 ');
+        divMensaje.classList.add('text-center', 'alert', 'col-12');
         if (tipo === 'error') {
             divMensaje.classList.add('alert-danger');
         } else {
@@ -32,8 +33,16 @@ class Ver {
         document.querySelector('#contenido').insertBefore(divMensaje, document.querySelector('.turnos'));
 
     }
+    borrarAlertas(){$(".alert").remove()}
+    mostrarTurno(nuevoTurno){
+        const liTurno= document.createElement('li');
+        liTurno.classList.add("nombre","dni","telefono","fecha","hora","aclaraciones");
+        document.querySelector("#asignado").append(liTurno);
+    }
+
 }
 const ver= new Ver();
+const turnera=new Turnos();
 
 eventListeners();
 
@@ -58,19 +67,18 @@ const turnoObj = {
 
 function datosTurno(e) {
     turnoObj[e.target.name] = e.target.value;
-
 }
 
 function nuevoTurno(e) {
     e.preventDefault();
-    const { nombre, dni, telefono, fecha, hora, aclaraciones } = turnoObj;
+    let turno= Object.assign({},turnoObj)
+    const { nombre, dni, telefono, fecha, hora, aclaraciones } = turno;
     if (nombre === '' || dni === '' || telefono === '' || fecha === '' || hora === '' || aclaraciones === '') {
         ver.imprimirAlerta('Todos los campos son obligatorios', 'error')
-
-        return;
+    }else{
+        turno.id = Date.now();
+        turnera.agregarTurnos(turno);
+        ver.borrarAlertas();
+        ver.mostrarTurno(turno);
     }
 }
-
-turnoObj.id = Date.now();
-
-administrarTurnos.agregarTurnos(turnoObj);
