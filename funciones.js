@@ -33,6 +33,8 @@ class Ver {
 
     }
 }
+const ver= new Ver();
+
 eventListeners();
 
 function eventListeners() {
