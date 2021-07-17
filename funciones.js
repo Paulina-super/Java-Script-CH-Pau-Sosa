@@ -5,7 +5,7 @@ const fechaInput = document.querySelector('#fecha');
 const horaInput = document.querySelector('#hora');
 const aclaracionesInput = document.querySelector('#aclaraciones');
 
-const fomulario = document.querySelector('#nuevo-turno');
+const formulario = document.querySelector('#nuevo-turno');
 const contenedorAsignado = document.querySelector('#asignado');
 
 
