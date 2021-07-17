@@ -59,7 +59,7 @@ function datosTurno(e) {
 
 }
 
-function nuevoturno(e) {
+function nuevoTurno(e) {
     e.preventDefault();
     const { nombre, dni, telefono, fecha, hora, aclaraciones } = turnoObj;
     if (nombre === '' || dni === '' || telefono === '' || fecha === '' || hora === '' || aclaraciones === '') {
