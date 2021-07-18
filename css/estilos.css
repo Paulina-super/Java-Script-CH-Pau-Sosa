@@ -46,11 +46,16 @@ p {
 
 body header {
     background-color: #024447;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8rem;
     width: 100vw;
-    height: 10%;
-    position: relative;
     top: 0;
-    z-index: 2;
+    z-index: 1;
+}
+body header .header_logo{
+    width: 50%;
+    padding: 2%;        
 }
 
 body header .menu {
