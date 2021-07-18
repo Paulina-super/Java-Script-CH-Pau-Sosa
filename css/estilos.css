@@ -180,3 +180,7 @@ body footer .redes__link--imagen {
     margin: 1%;  
     padding: 1rem; 
 }
+
+.alert{
+    list-style: none;
+}
