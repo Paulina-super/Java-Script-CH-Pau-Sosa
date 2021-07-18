@@ -6,7 +6,6 @@ const horaInput = document.querySelector('#hora');
 const aclaracionesInput = document.querySelector('#aclaraciones');
 
 const formulario = document.querySelector('#nuevo-turno');
-const contenedorAsignado = document.querySelector('#asignado');
 
 
 class Turnos {
