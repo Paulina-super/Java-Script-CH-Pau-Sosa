@@ -60,14 +60,14 @@ class Ver {
             ulTurno.append(liDni);
             const liTelefono= document.createElement('li');
             liTelefono.textContent= "Teléfono: " + nuevoTurno.telefono;
-            ulTelefono.append(liTelefono);
+            ulTurno.append(liTelefono);
             const liFecha= document.createElement('li');
             liFecha.textContent= "Fecha: " + nuevoTurno.fecha;
             ulTurno.append(liFecha);
             const liHorario= document.createElement('li');
             liHorario.textContent= "Horario: " + nuevoTurno.hora;
             ulTurno.append(liHorario);
-            const liHorario= document.createElement('li');
+            const liAclaraciones= document.createElement('li');
             liAclaraciones.textContent= "Aclaraciones: " + nuevoTurno.aclaraciones;
             ulTurno.append(liAclaraciones);
         }
