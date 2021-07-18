@@ -46,15 +46,13 @@ p {
 
 body header {
     background-color: #024447;
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 8rem;
     width: 100vw;
     top: 0;
     z-index: 1;
 }
 body header .header_logo{
-    width: 50%;
+    align-items: center;
+    width: 10%;
     padding: 2%;        
 }
 
