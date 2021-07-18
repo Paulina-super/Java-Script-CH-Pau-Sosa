@@ -14,22 +14,37 @@ class Turnos {
         this.turnos = JSON.parse(localStorage.getItem("turnos") || "[]");
     }
     agregarTurnos(turno) {
+      this.acomodarHora(turno);
       this.validarTurno(turno);
       this.turnos = [...this.turnos, turno];
       localStorage.setItem("turnos", JSON.stringify(this.turnos));
     }
+    // que los turnos sean cada 15 minutos
+    acomodarHora(turno) {
+      let partes = turno.hora.split(":");
+      let h = partes[0];
+      let m = partes[1];
+      while (m % 15 != 0) { m--; }
+      turno.hora = h + ":" + m;
+    }
     validarTurno(turno) {
-      // que no se repitan los turnos
+    
       // que no se puedan sacar turnos para atrás
-      // que los turnos sean cada 15 minutos
+
+
       // que no se pueda sacar turno fuera de horario 9:00 a 20:00
 
       for (let i = 0; i < this.cantidadTurnos(); i++) {
         if (this.turnos[i].dni == turno.dni) {
             throw "Ya hay un turno para este DNI";
+        }      
+        // que no se repitan los turnos      
+        if (this.turnos[i].fecha == turno.fecha && this.turnos[i].hora == turno.hora) {
+            throw "Este horario ya fué asignado a otro paciente";
         }
       }
     }
+
     cantidadTurnos(){
         return this.turnos.length;
     }
@@ -54,43 +69,41 @@ class Ver {
     borrarAlertas(){
         $(".alert").remove()
     }
-    mostrarTurnos(turnera){
-        $(".turno").remove()
-        for (let i = 0; i < turnera.cantidadTurnos(); i++){
-            const nuevoTurno= turnera.turnos[i]
-            const divTurno= document.createElement('div');
-            divTurno.classList.add('turno');
-            document.querySelector("#asignado").append(divTurno);
-            const hTitulo= document.createElement('h3');
-            hTitulo.textContent= "Turno " + nuevoTurno.id;
-            divTurno.append(hTitulo);
-            const ulTurno = document.createElement('ul');
-            divTurno.append(ulTurno);
-            const liNombre= document.createElement('li');
-            liNombre.textContent= "Nombre: " + nuevoTurno.nombre;
-            ulTurno.append(liNombre);
-            const liDni= document.createElement('li');
-            liDni.textContent= "DNI: " + nuevoTurno.dni;
-            ulTurno.append(liDni);
-            const liTelefono= document.createElement('li');
-            liTelefono.textContent= "Teléfono: " + nuevoTurno.telefono;
-            ulTurno.append(liTelefono);
-            const liFecha= document.createElement('li');
-            liFecha.textContent= "Fecha: " + nuevoTurno.fecha;
-            ulTurno.append(liFecha);
-            const liHorario= document.createElement('li');
-            liHorario.textContent= "Horario: " + nuevoTurno.hora;
-            ulTurno.append(liHorario);
-            const liAclaraciones= document.createElement('li');
-            liAclaraciones.textContent= "Aclaraciones: " + nuevoTurno.aclaraciones;
-            ulTurno.append(liAclaraciones);
-        }
+    mostrarTurno(nuevoTurno){
+        this.borrarAlertas();
+
+        const divTurno = document.createElement('div');
+        divTurno.classList.add('text-center', 'alert', 'col-12', 'alert-info');
+        document.querySelector('#contenido').insertBefore(divTurno, document.querySelector('.turnos'));
+
+        const hTitulo= document.createElement('h3');
+        hTitulo.textContent= "Turno " + nuevoTurno.id;
+        divTurno.append(hTitulo);
+        const ulTurno = document.createElement('ul');
+        divTurno.append(ulTurno);
+        const liNombre= document.createElement('li');
+        liNombre.textContent= "Nombre: " + nuevoTurno.nombre;
+        ulTurno.append(liNombre);
+        const liDni= document.createElement('li');
+        liDni.textContent= "DNI: " + nuevoTurno.dni;
+        ulTurno.append(liDni);
+        const liTelefono= document.createElement('li');
+        liTelefono.textContent= "Teléfono: " + nuevoTurno.telefono;
+        ulTurno.append(liTelefono);
+        const liFecha= document.createElement('li');
+        liFecha.textContent= "Fecha: " + nuevoTurno.fecha;
+        ulTurno.append(liFecha);
+        const liHorario= document.createElement('li');
+        liHorario.textContent= "Horario: " + nuevoTurno.hora;
+        ulTurno.append(liHorario);
+        const liAclaraciones= document.createElement('li');
+        liAclaraciones.textContent= "Aclaraciones: " + nuevoTurno.aclaraciones;
+        ulTurno.append(liAclaraciones);
     }
 
 }
 const ver= new Ver();
 const turnera=new Turnos();
-ver.mostrarTurnos(turnera);
 
 eventListeners();
 
@@ -128,7 +141,7 @@ function nuevoTurno(e) {
           turno.id = turnera.cantidadTurnos()+1;
           turnera.agregarTurnos(turno);
           ver.borrarAlertas();
-          ver.mostrarTurnos(turnera);
+          ver.mostrarTurno(turno);
         } catch (e) {
           ver.imprimirAlerta(e, "error");
         }
