@@ -13,14 +13,28 @@ class Turnos {
     constructor() {
         this.turnos = JSON.parse(localStorage.getItem("turnos") || "[]");
     }
-    agregarTurnos(turno) {/*verificar que no se repitan los turnos*/
-        this.turnos = [...this.turnos, turno];
-        localStorage.setItem("turnos", JSON.stringify(this.turnos));
+    agregarTurnos(turno) {
+      this.validarTurno(turno);
+      this.turnos = [...this.turnos, turno];
+      localStorage.setItem("turnos", JSON.stringify(this.turnos));
+    }
+    validarTurno(turno) {
+      // que no se repitan los turnos
+      // que no se puedan sacar turnos para atrás
+      // que los turnos sean cada 15 minutos
+      // que no se pueda sacar turno fuera de horario 9:00 a 20:00
+
+      for (let i = 0; i < this.cantidadTurnos(); i++) {
+        if (this.turnos[i].dni == turno.dni) {
+            throw "Ya hay un turno para este DNI";
+        }
+      }
     }
     cantidadTurnos(){
         return this.turnos.length;
     }
 }
+
 /*CAMBIAR NOMBRE CLASS*/
 class Ver {
     imprimirAlerta(mensaje, tipo) {
@@ -110,9 +124,14 @@ function nuevoTurno(e) {
     if (nombre === '' || dni === '' || telefono === '' || fecha === '' || hora === '' || aclaraciones === '') {
         ver.imprimirAlerta('Todos los campos son obligatorios', 'error')
     }else{
-        turno.id = turnera.cantidadTurnos()+1;
-        turnera.agregarTurnos(turno);
-        ver.borrarAlertas();
-        ver.mostrarTurnos(turnera);
+        try {
+          turno.id = turnera.cantidadTurnos()+1;
+          turnera.agregarTurnos(turno);
+          ver.borrarAlertas();
+          ver.mostrarTurnos(turnera);
+        } catch (e) {
+          ver.imprimirAlerta(e, "error");
+        }
     }
 }
+
