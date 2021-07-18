@@ -11,35 +11,26 @@ html {
 h1 {
     font-weight: bold;
     text-align: center;
-    font-family: 'Allura', cursive;
-    font-size: 2rem;
-    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #ECF6F6;
     padding: 4px;
 }
 
 h2 {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    color: whitesmoke;
+    
+    color: #ECF6F6;
 }
 
 h3 {
     font-weight: bold;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 30px;
     margin-bottom: 20px;
-    color: rgb(2, 2, 90);
-}
-
-h4 {
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: rgb(2, 2, 90);
+    color: #024447;
 }
 
 p {
@@ -48,15 +39,15 @@ p {
     max-width: 90%;
     padding: auto;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 1rem;
     color: #201F1D;
 }
 
 body header {
-    background-color: rgb(2, 2, 90);
+    background-color: #024447;
     width: 100vw;
-    height: 5%;
+    height: 10%;
     position: relative;
     top: 0;
     z-index: 2;
@@ -67,21 +58,21 @@ body header .menu {
 }
 
 body header .menu .navbar-nav {
-    background-color: rgb(118, 118, 245);
+    background-color: #03989e;
 }
 
 body header .menu .navbar-nav a {
-    background-color: #201F1D;
-    color: #DAC3B9;
+    background-color: #024447;
+    color: #ECF6F6;
 }
 
 body header .menu .navbar-nav a:hover {
-    background-color: #B36568;
+    background-color: #03989e;
     cursor: pointer;
 }
 
 body main .home {
-    background-color: #DAC3B9;
+    background-color: #ECF6F6;
     display: flex;
     align-items: center;
 }
@@ -105,7 +96,7 @@ body main .turnos {
 body main .turnos .formulario {
     width: 480px;
     margin: auto;
-    background: rgba(2, 2, 90, 0.4);
+    background: rgba(2, 68, 71, 0.4);
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 7px;
@@ -122,7 +113,7 @@ body main .turnos form select,
 body main .turnos form textarea,
 body main .turnos form input {
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #201F1D;
     margin-bottom: 10px;
@@ -141,8 +132,8 @@ body main .turnos form input textarea {
 }
 
 body main .turnos form #boton {
-    background-color: rgb(2, 2, 90);
-    color: #DAC3B9;
+    background-color: rgb(2, 68, 71);
+    color: #ECF6F6;
     padding: 10px;
     border: none;
     width: 100%;
@@ -154,11 +145,11 @@ body main .turnos form #boton #boton:hover {
 
 body footer {
     display: grid;
-    grid-template-columns: 50% 40% 10%;
-    grid-template-rows: 1.5rem;
-    background-color: rgb(2, 2, 90);
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 6rem;
+    background-color: #000405;
     width: 100vw;
-    height: 3rem;
+    height: 6rem;
     bottom: 0;
     position: relative;
 }
@@ -166,22 +157,23 @@ body footer {
 body footer .img-fluid {
     float: center;
     padding: 1%;
-    height: 3rem;
+    height: 4rem;
 }
 
 body footer .footer__lista {
     list-style: none;
-    margin: 0.063rem;
+    margin: 1rem;
 }
 
 body footer .footer__lista .footer__lista--item {
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     font-size: 1rem;
-    color: #DAC3B9;
+    color: #ECF6F6;
 }
 
 body footer .redes__link--imagen {
-    width: 12%;
-    margin: 0.313rem;
+    width: 50%;
+    margin: 1%;  
+    padding: 1rem; 
 }
