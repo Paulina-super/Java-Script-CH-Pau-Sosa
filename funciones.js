@@ -92,26 +92,26 @@ class Ver {
         const hTitulo= document.createElement('h3');
         hTitulo.textContent= "Turno " + nuevoTurno.id;
         divTurno.append(hTitulo);
-        const ulTurno = document.createElement('ul');
-        divTurno.append(ulTurno);
-        const liNombre= document.createElement('li');
-        liNombre.textContent= "Nombre: " + nuevoTurno.nombre;
-        ulTurno.append(liNombre);
-        const liDni= document.createElement('li');
-        liDni.textContent= "DNI: " + nuevoTurno.dni;
-        ulTurno.append(liDni);
-        const liTelefono= document.createElement('li');
-        liTelefono.textContent= "Teléfono: " + nuevoTurno.telefono;
-        ulTurno.append(liTelefono);
-        const liFecha= document.createElement('li');
-        liFecha.textContent= "Fecha: " + nuevoTurno.fecha;
-        ulTurno.append(liFecha);
-        const liHorario= document.createElement('li');
-        liHorario.textContent= "Horario: " + nuevoTurno.hora;
-        ulTurno.append(liHorario);
-        const liAclaraciones= document.createElement('li');
-        liAclaraciones.textContent= "Aclaraciones: " + nuevoTurno.aclaraciones;
-        ulTurno.append(liAclaraciones);
+        const divTurno = document.createElement('div');
+        divTurno.append(divTurno);
+        const divNombre= document.createElement('div');
+        divNombre.textContent= "Nombre: " + nuevoTurno.nombre;
+        divTurno.append(divNombre);
+        const divDni= document.createElement('div');
+        divDni.textContent= "DNI: " + nuevoTurno.dni;
+        divTurno.append(divDni);
+        const divTelefono= document.createElement('div');
+        divTelefono.textContent= "Teléfono: " + nuevoTurno.telefono;
+        divTurno.append(divTelefono);
+        const divFecha= document.createElement('div');
+        divFecha.textContent= "Fecha: " + nuevoTurno.fecha;
+        divTurno.append(divFecha);
+        const divHorario= document.createElement('div');
+        divHorario.textContent= "Horario: " + nuevoTurno.hora;
+        divTurno.append(divHorario);
+        const divAclaraciones= document.createElement('div');
+        divAclaraciones.textContent= "Aclaraciones: " + nuevoTurno.aclaraciones;
+        divTurno.append(divAclaraciones);
     }
 
 }
