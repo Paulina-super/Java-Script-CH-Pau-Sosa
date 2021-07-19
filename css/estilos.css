@@ -51,39 +51,18 @@ body header {
     z-index: 1;
 }
 body header .header_logo{
-    align-items: center;
+    position: relative;
     width: 10%;
-    padding: 2%;        
+    margin-left: 45%;        
 }
-
-body header .menu {
-    z-index: 2;
-}
-
-body header .menu .navbar-nav {
-    background-color: #03989e;
-}
-
-body header .menu .navbar-nav a {
-    background-color: #024447;
-    color: #ECF6F6;
-}
-
-body header .menu .navbar-nav a:hover {
-    background-color: #03989e;
-    cursor: pointer;
+body header .header{
+    padding:1%;       
 }
 
 body main .home {
     background-color: #024447;
     display: flex;
-    align-items: center;
-}
-
-body main .home .home__titulo {
-    margin: 10% 30%;
-    z-index: 1;
-    text-align: center;
+    align-items: center;    
 }
 
 body main .turnos {
