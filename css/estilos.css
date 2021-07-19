@@ -75,7 +75,7 @@ body header .menu .navbar-nav a:hover {
 }
 
 body main .home {
-    background-color: #ECF6F6;
+    background-color: #024447;
     display: flex;
     align-items: center;
 }
@@ -150,7 +150,7 @@ body footer {
     display: grid;
     grid-template-columns: 90% 10%;
     grid-template-rows: 6rem;
-    background-color: #000405;
+    background-color: #024447;
     width: 100vw;
     height: 6rem;
     bottom: 0;
@@ -181,6 +181,7 @@ body footer .redes__link--imagen {
     padding: 1rem; 
 }
 
-.alert{
+.alert ul{
     list-style: none;
+    text-align: center;
 }

@@ -14,11 +14,11 @@ class Turnos {
     }
     agregarTurnos(turno) {
       this.acomodarHora(turno);
+      this.limpiarTurnos();
       this.validarTurno(turno);
       this.turnos = [...this.turnos, turno];
       localStorage.setItem("turnos", JSON.stringify(this.turnos));
     }
-    // que los turnos sean cada 15 minutos
     acomodarHora(turno) {
       let partes = turno.hora.split(":");
       let h = partes[0];
@@ -26,30 +26,44 @@ class Turnos {
       while (m % 15 != 0) { m--; }
       turno.hora = h + ":" + m;
     }
+    limpiarTurnos() {
+      let turnosValidos = [];
+      for (let i = 0; i < this.cantidadTurnos(); i++) {
+        let turno = this.turnos[i];
+        if (!this.esAnteriorAFechaActual(turno)) {
+          turnosValidos.push(turno);
+        }
+      }
+      this.turnos = turnosValidos;
+    }
     validarTurno(turno) {
-    
       // que no se puedan sacar turnos para atrás
-
-
-      // que no se pueda sacar turno fuera de horario 9:00 a 20:00
+      if (this.esAnteriorAFechaActual(turno)) {
+        throw "No se pueden pedir turnos en el pasado";
+      }
 
       for (let i = 0; i < this.cantidadTurnos(); i++) {
+        // que no se pueda sacar más de un turno para la misma persona
         if (this.turnos[i].dni == turno.dni) {
             throw "Ya hay un turno para este DNI";
-        }      
-        // que no se repitan los turnos      
+        }
+
+        // que no se repitan los turnos
         if (this.turnos[i].fecha == turno.fecha && this.turnos[i].hora == turno.hora) {
             throw "Este horario ya fué asignado a otro paciente";
         }
       }
     }
-
+    esAnteriorAFechaActual(turno) {
+      let fechaTurno = new Date(turno.fecha + "T" + turno.hora);
+      let fechaActual = new Date();
+      return fechaTurno < fechaActual;
+    }
     cantidadTurnos(){
         return this.turnos.length;
     }
 }
 
-/*CAMBIAR NOMBRE CLASS*/
 class Ver {
     imprimirAlerta(mensaje, tipo) {
         this.borrarAlertas();
