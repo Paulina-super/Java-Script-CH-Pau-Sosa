@@ -92,8 +92,6 @@ class Ver {
         const hTitulo= document.createElement('h3');
         hTitulo.textContent= "Turno " + nuevoTurno.id;
         divTurno.append(hTitulo);
-        const divTurno = document.createElement('div');
-        divTurno.append(divTurno);
         const divNombre= document.createElement('div');
         divNombre.textContent= "Nombre: " + nuevoTurno.nombre;
         divTurno.append(divNombre);
@@ -155,6 +153,7 @@ function nuevoTurno(e) {
           turnera.agregarTurnos(turno);
           ver.borrarAlertas();
           ver.mostrarTurno(turno);
+          formulario.reset()
         } catch (e) {
           ver.imprimirAlerta(e, "error");
         }
